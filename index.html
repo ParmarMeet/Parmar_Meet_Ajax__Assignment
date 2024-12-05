@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Earbuds AJAX</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet"/>
+    <!-- link to greensock main library and scroll plugin -->
+  </head>
+  <body>
+    <div class="grid-con">
+      <div class="col-span-full">
+        <model-viewer id="model" src="model/earbuds.gltf" ar ar-modes="webxr scene-viewer quick-look" ios-src="model/earbuds.usdz" camera-controls poster="images/poster.webp" shadow-intensity="1" environment-image="images/aircraft_workshop_01_1k.hdr" exposure="1.7" camera-orbit="52.34deg 88.29deg 874.8m" field-of-view="30deg">
+
+          <button class="Hotspot" slot="hotspot-1" data-position="4.509541602217702m 188.15995105251227m 9.50815713204895m" data-normal="0.07165658391326078m 0.2895796961481602m 0.9544678797951354m" data-visibility-attribute="visible">
+              <div class="HotspotAnnotation" id="hotspot-1">
+              </div>
+          </button>
+          
+          <button class="Hotspot" slot="hotspot-2" data-position="-0.2726839123058369m 140.30711623232733m 21.0312925062301m" data-normal="-0.09801735813265836m 0.06891482258166999m 0.9927957215526422m" data-visibility-attribute="visible">
+              <div class="HotspotAnnotation" id="hotspot-2">
+              </div>
+          </button>
+          
+          <button class="Hotspot" slot="hotspot-3" data-position="23.843773240794235m 171.08132535583204m -66.30477162260917m" data-normal="0.31295083699913184m -0.014044475301806896m -0.9496654812801401m" data-visibility-attribute="visible">
+              <div class="HotspotAnnotation" id="hotspot-3">
+              </div>
+          </button>
+          
+          <button class="Hotspot" slot="hotspot-4" data-position="1.360106536965026m 43.83192571313832m 13.663794805665134m" data-normal="0.09273207823037619m -0.3861764796999074m 0.9177518663525901m" data-visibility-attribute="visible">
+              <div class="HotspotAnnotation" id="hotspot-4">        
+              </div>
+          </button>
+          <button slot="ar-button" id="ar-button">
+              View in your space
+          </button>
+          <div id="ar-prompt">
+              <img src="images/ar_hand_prompt.png">
+          </div>
+        </model-viewer>
+      </div>
+ <div class="col-span-full">
+        <h2>Infobox</h2>
+        <ul id="infobox-list"> </ul>
+        <!-- Copies of template will be dumped here -->
+
+        <template id="infobox-template">
+        <li class="infobox-item">
+          <h2 class="infobox-heading"></h2>
+          <p class="infobox-description"></p>
+          <img class="infobox-image" alt="Infobox Image">
+        </li>
+      </template>
+      </div>
+      <div class="col-span-full">
+        <h2>Materials</h2>
+        <ul id="material-list"> </ul>
+        <!-- Copies of template will be dumped here -->
+
+        <template id="material-template">
+          <li>
+            <h3 class="material-heading"> </h3>
+            <p class="material-description"> </p>
+          </li>
+        </template>
+      </div>
+       
+
+    </div>  
+    <!-- Loads <model-viewer> for browsers: -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
